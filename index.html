@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="dist/css/style.css">
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <style>
-        #modal {z-index: 100000000; display: block; position:fixed; width: 100%; height: 100%; padding: 5%; text-align:center; background: rgba(0,0,0,.93);}
+        #modal {z-index: 100000000; display: block; position:fixed; width: 100%; height: 100%; padding: 5%; text-align:center; 
+            background: rgba(0,0,0,.13);}
         #modal h2 {font-size: 60pt; color: white; margin-top: 12%;}
     </style>
 </head>
@@ -19,34 +20,6 @@
         <header class="site-header">
             <div class="container">
                 <div class="site-header-inner">
-                    <div class="brand header-brand">
-                        <h1 class="m-0">
-                            <a href="#">
-                                <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                                    <title>Warm Cyborg</title>
-                                    <defs>
-                                        <linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="logo-gradient-b">
-                                            <stop stop-color="#39D8C8" offset="0%"/>
-                                            <stop stop-color="#BCE4F4" offset="47.211%"/>
-                                            <stop stop-color="#838DEA" offset="100%"/>
-                                        </linearGradient>
-                                        <path d="M32 16H16v16H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h28a2 2 0 0 1 2 2v14z" id="logo-gradient-a"/>
-                                        <linearGradient x1="23.065%" y1="25.446%" y2="100%" id="logo-gradient-c">
-                                            <stop stop-color="#1274ED" stop-opacity="0" offset="0%"/>
-                                            <stop stop-color="#1274ED" offset="100%"/>
-                                        </linearGradient>
-                                    </defs>
-                                    <g fill="none" fill-rule="evenodd">
-                                        <mask id="logo-gradient-d" fill="#fff">
-                                            <use xlink:href="#logo-gradient-a"/>
-                                        </mask>
-                                        <use fill="url(#logo-gradient-b)" xlink:href="#logo-gradient-a"/>
-                                        <path fill="url(#logo-gradient-c)" mask="url(#logo-gradient-d)" d="M-16-16h32v32h-32z"/>
-                                    </g>
-                                </svg>
-                            </a>
-                        </h1>
-                    </div>
                 </div>
             </div>
         </header>
@@ -56,13 +29,10 @@
                 <div class="container-sm">
                     <div class="hero-inner">
                         <h1 class="hero-title h2-mobile mt-0 is-revealing">Warm Cyborg</h1>
-                        <p class="hero-paragraph is-revealing">Expert digital branding and web design services.</p>
+                        <p class="hero-paragraph is-revealing">Expert <a href="/services">SEO, digital branding and web design services</a>.</p>
                         <div class="hero-form newsletter-form field field-grouped is-revealing">
-                            <div class="control control-expanded">
-                                <input class="input" type="email" name="email" placeholder="Your best email&hellip;">
-                            </div>
-                            <div class="control">
-                                <a class="button button-primary button-block button-shadow" href="#">Connect</a>
+                            <div>
+                                <a class="button button-primary button-block button-shadow" href="#contact-service">Connect</a>
                             </div>
                         </div>
                         <div class="hero-browser">
@@ -249,25 +219,6 @@
                     </div>
                 </div>
             </section>
-
-            <section class="newsletter section">
-                <div class="container-sm">
-                    <div class="newsletter-inner section-inner">
-                        <div class="newsletter-header text-center is-revealing">
-                            <h2 class="section-title mt-0">Let's talk</h2>
-                            <p class="section-paragraph">Want to work together? Let's get in touch.</p>
-                        </div>
-                        <div class="footer-form newsletter-form field field-grouped is-revealing">
-                            <div class="control control-expanded">
-                                <input class="input" type="email" name="email" placeholder="Your best email&hellip;">
-                            </div>
-                            <div class="control">
-                                <a class="button button-primary button-block button-shadow" href="#">Connect</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
         </main>
 
         <footer class="site-footer text-light">
@@ -300,12 +251,12 @@
                             <a href="#">Contact</a>
                         </li> -->
                         <li>
-                            <a href="#">About us</a>
-                        </li>
-                        <!-- <li>
-                            <a href="#">Services</a>
+                            <a href="/about">About us</a>
                         </li>
                         <li>
+                            <a href="/services">Services</a>
+                        </li>
+                        <!-- <li>
                             <a href="#">Support</a>
                         </li> -->
                     </ul>
