@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Glenn Friesen</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+		<style type="text/css"></style>
+	</head>
+	<body>
+
+		<script type="module">
+		import interact from
+		'https://cdn.interactjs.io/v1.10.17/interactjs/index.js'
+
+		interact('.item').draggable({
+		  listeners: {
+		    move (event) {
+		      console.log(event.pageX,
+		                  event.pageY)
+		    }
+		  }
+		})
+		</script>
+
+	</body>
+</html>
