@@ -9,14 +9,68 @@
 			body { margin: 0px; overflow: hidden; font-size: 200%;}
 			canvas { opacity: .8; position:relative; z-index: 3;}
 			div.top_text {float:left; margin-left: 26px; margin-top: 26px; position:absolute; z-index: 10000;}
-			h1 {font-size:2.8em;}
+
 			p {font-size:1.8em;}
 			a {font-size:1.8em;}
+			@mixin sliced-text(){
+
+			  position: relative;
+			  visibility: hidden;
+
+			  &::before,
+			  &::after {
+			    visibility: visible;
+			    content: attr(data-word);
+			    position: absolute;
+			    top: 0; right: 0;
+			    bottom: 0; left: 0;
+			    z-index: 1;
+			    transition: transform 0.5s;
+			  }
+
+			  &::before {
+			    clip-path: polygon(0 0, 100% 0%, 100% 37%, 0 65%);
+			    will-change: transform;
+			    transform: translatex(-0.13em);
+			  }
+
+			  &::after {
+			    clip-path: polygon(0% 100%, 100% 100%, 100% 39%, 0 67%);
+			    transform: translatex(0.13em);
+			  }
+
+			  &:hover::before,
+			  &:hover::after {
+			    transform: translatex(0) translatez(0);  
+			  }
+			}
+
+			h1 {
+			  color: #fc0;
+			  @include sliced-text;
+			  font-size: 6em;
+			  line-height: 1.3;
+			  text-transform: uppercase;
+			  -webkit-transition: all .33s ease-in-out;
+			  -moz-transition: all .33s ease-in-out;
+			  -ms-transition: all .33s ease-in-out;
+			  -o-transition: all .33s ease-in-out;
+			  transition: all .33s ease-in-out;
+			}
+
+			h1:hover {
+			  color: white;
+			}
+
+			// Center using flexbox
+			:root{height:100%;display:flex}:root>*{margin:auto}
+
 		</style>
 		
 	</head>
+	
 <body class="is-boxed has-animations">
-                                    <div class="top_text"><h1 class="feature-title">Warm Cyborg</h3>
+                                    <div class="top_text"><h1 data-word="Warm Cyborg">Warm Cyborg</h1>
                                     <p class="text-sm">SEO and Web Design<br />Helping people find what they're looking for.</p>
 	<p class="text-sm"><a href="/about">About Us</a> | <a href="/services">Contact Us</a></p>
 	</div>
